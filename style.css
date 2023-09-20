@@ -1,0 +1,14 @@
+body {
+    background-color: #c4e6f4;
+    text-align: center;
+
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+p {
+    font-size: large;
+    font-family:'Times New Roman', Times, serif;
+
+    text-align: justify;
+}
