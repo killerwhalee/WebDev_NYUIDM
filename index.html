@@ -1,14 +1,129 @@
-<html>
-    <head>
-        <title>Chaemin Lim</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <a href="Assignment1/assignment1.html">
-            <h1>Assignment 1</h1>
+<!DOCTYPE html>
+<html lang="ko" class="h-100">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>WebDev IDM</title>
+    <style>
+        @font-face {
+            font-family: 'Pretendard-Medium';
+            src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="resources/img/logo-white.png" alt="" width="98" height="19">
+            </a>
+            <button 
+            class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarTogglerDemo02" 
+            aria-controls="navbarTogglerDemo02" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation"
+            >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a 
+                    class="nav-link active" 
+                    href="./index.html"
+                    >
+                    Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a 
+                class="nav-link active" 
+                href="/gallery"
+                >
+                Gallery
+            </a>
+        </li>
+        <li class="nav-item">
+            <a 
+            class="nav-link" 
+            href="https://github.com/killerwhalee/kaist-world"
+            target="_blank"
+            >
+            Github
         </a>
-        <a href="Assignment2/assignment2.html">
-            <h1>Assignment 2</h1>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+            Menus
         </a>
-    </body>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/">Who am I?</a></li>
+            <li><a class="dropdown-item" href="/">Play funny game!</a></li>
+            <li><a class="dropdown-item" href="/">Go to somewhere..</a></li>
+        </ul>
+    </li>
+</ul>
+</div>
+</div>
+</nav>
+<main class="flex-shrink-0">
+    <div class="container my-4">
+        <div class="p-5 mb-4 bg-light rounded-3">
+            <div class="container-fluid py-5">
+                <h1 class="display-5 fw-bold">Welcome!</h1>
+                <p class="fs-5">
+                    <img src="resources/img/logo-black.png" alt="" width="98" height="19"> is the website where everyone can share their creativity 
+                    and uniqueness for web interaction. Feel free to join us to show your's to
+                    everyone who are waiting for awesome ideas!
+                </p>
+                <a class="btn btn-outline-primary fw-bold" href="/gallery">Go to Gallery</a>
+            </div>
+        </div>
+        
+        <div class="row align-items-md-stretch">
+            <div class="col-md-6">
+                <div class="h-100 p-5 text-bg-dark rounded-3">
+                    <h2>Simple is the best</h2>
+                    <p>
+                        <b>Be Simple.</b> It is important how a designer can convey their purpost
+                        to client with least explaination. To achieve this, title of explore is
+                        limited to 32 characters while detail is limited to 256 characters.
+                        288 characters, with captivating image is enough to explain your explore.
+                    </p>
+                    <a class="btn btn-outline-light" href="/">See Our Visions</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="h-100 p-5 bg-light border rounded-3">
+                    <h2>How to use this place?</h2>
+                    <p>
+                        <b>It's up to you.</b> Find something that makes you interested.
+                        <br><br><br><br>
+                    </p>
+                    <a class="btn btn-outline-secondary" href="/">How about this?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer mt-auto pt-3 bg-dark-subtle">
+    <div class="container">
+        <div class="text-muted">
+            <img src="resources/img/logo-black.png" alt="" width="196" height="38">
+            <p>
+                Powered by killerwhalee<br>
+                Site is optimized for chrome, whale explorer.
+            </p>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
 </html>
