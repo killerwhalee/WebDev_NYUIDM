@@ -1,0 +1,92 @@
+* {
+    font-family: 'Pretendard', 'sans-serif';
+}
+
+body {
+    background: url(background.gif) repeat center center/cover;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin-top: 10px;
+    padding: 20px 10px;
+}
+
+.card-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.title-box {
+    background-color: #8e8e8e;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.zero-text {
+    margin:0;
+}
+
+/* Basic styling for the card */
+.card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 16px;
+    width: 28%;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+button {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+
+button:hover {
+    background-color: #8e8e8e;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+
+nav {
+    width: 98%;
+    margin-top: 10px;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(73, 73, 73);
+    color: white;
+}
+
+nav a {
+    color: white;
+}
+
+nav a:hover {
+    color: yellow;
+}
