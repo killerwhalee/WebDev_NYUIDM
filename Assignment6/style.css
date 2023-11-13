@@ -1,0 +1,24 @@
+* {
+    font-family: 'Pretendard', 'sans-serif';
+}
+
+body {
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 100vh;
+    width: 50%;
+    padding: 20px 10px;
+    align-self: center;
+}
+
+.input {
+    margin: 10px;
+}

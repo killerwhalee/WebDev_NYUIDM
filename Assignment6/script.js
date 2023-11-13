@@ -12,8 +12,9 @@ var wordList = [];
 
 wordButton.addEventListener('click', () => {	
 	// Check and place player's word
-	let word = wordInput.value;
+	let word = wordInput.value.toLowerCase();
 	let nextWord = validateWord(word);
+	console.log(nextWord);
 	if (nextWord){
 		placeWord(nextWord);
 	}
@@ -27,15 +28,19 @@ function validateWord(word) {
 	}
 	
 	// Check if such word exists
-	let charIndex = word.toLowerCase().charCodeAt(0) - 97;
+	let charIndex = word.charCodeAt(0) - 97;
+	var wordExists = true;
 	fetch('./dictionary_alpha_arrays.json')
 	.then(response => response.json())
 	.then(dictionary => {
-		if (dictionary[charIndex].hasOwnProperty(word)) {
-			console.log('word does not exist');
-			return false;
-		}
+		wordExists = dictionary[charIndex].hasOwnProperty(word);
+		console.log(wordExists);
 	});
+	console.log(wordExists);
+	if (!wordExists) {
+		console.log('word does not exist');
+		return false;
+	}
 	
 	// Check if word has been used
 	if (wordList.indexOf(word) != -1) {
@@ -46,7 +51,7 @@ function validateWord(word) {
 	// Check if word's first character matches
 	if (wordList.length) {
 		let lastWord = wordList[wordList.length - 1];
-		let lastCharIndex = lastWord.toLowerCase().charCodeAt(lastWord.length - 1) - 97;
+		let lastCharIndex = lastWord.charCodeAt(lastWord.length - 1) - 97;
 		if (charIndex != lastCharIndex) {
 			console.log('character never matches');
 			return false;
@@ -81,7 +86,7 @@ async function placeWord(word) {
 	wordButton.disabled = true;
 	
 	// Find appropriate word from dictionary
-	let lastCharIndex = word.toLowerCase().charCodeAt(word.length - 1) - 97;
+	let lastCharIndex = word.charCodeAt(word.length - 1) - 97;
 	fetch('./dictionary_alpha_arrays.json')
 	.then(response => response.json())
 	.then(dictionary => {

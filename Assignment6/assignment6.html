@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Assignment 6</title>
-        <link rel="stylesheet" href="style.css"> 
-        <script src="script.js" defer></script>
-    </head>
-    <body>
-        <main id="theMain">
+<head>
+    <title>Assignment 6</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link 
+    rel="stylesheet" 
+    as="style" 
+    crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" 
+    />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="main">
+        <div class="container">
             <h1>Word Chain!</h1>
-
+            
             <h3 id="word-last">Word</h3>
             <h4 id="word-definition">meaning of the word</h4>
-
-            <p id="word-chain"></p>
-            <input 
-            type="text" 
-            id="word-input" 
-            placeholder="Enter your word"></input>
             
-         <button id="word-button">Confirm!</button>
-        </main>
-    </body>
+            <p id="word-chain">beat the computer!</p>
+            <div class="input">
+                <input 
+                type="text" 
+                id="word-input" 
+                placeholder="Enter your word"></input>
+            </div>
+            <div>
+                <button id="word-button">Confirm!</button>
+            </div>
+        </div>
+    </main>
+</body>
 </html>
