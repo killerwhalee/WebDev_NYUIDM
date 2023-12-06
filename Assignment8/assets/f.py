@@ -20,15 +20,25 @@ def get_average_color(image_path):
         sum([pixel[2] for pixel in pixels]) // len(pixels)
     )
 
+    # DEBUGGING
+    avg_color = (
+        random.randint(0, 255),
+        random.randint(0, 255),
+        random.randint(0, 255)
+    )
+
     return "#{:02x}{:02x}{:02x}".format(*avg_color)
 
 image_list = []
 
-for image_path in os.listdir('images'):
+#for image_path in os.listdir('images'):
+for i in range(1000):
+    image_path = "sample.jpg"
+
     image_data = {'title': 'Untitled', 'caption': 'Film Negative'}
-    image_data["image"] = f"assets/images/{image_path}"
+    image_data["image"] = f"assets/{image_path}"
     
-    average_color = get_average_color(f'images/{image_path}')
+    average_color = get_average_color(f'{image_path}')
     print(f'Average Color: {average_color}')
 
     image_data["color"] = average_color
