@@ -3,6 +3,8 @@ import random
 import os
 import json
 
+file_dir = os.path.dirname(__file__)
+
 def get_average_color(image_path):
     # Open the image
     image = Image.open(image_path)
@@ -21,29 +23,25 @@ def get_average_color(image_path):
     )
 
     # DEBUGGING
-    avg_color = (
-        random.randint(0, 255),
-        random.randint(0, 255),
-        random.randint(0, 255)
-    )
+    #avg_color = tuple(pixels[random.randint(0, len(pixels) - 1)])
 
     return "#{:02x}{:02x}{:02x}".format(*avg_color)
 
 image_list = []
 
-#for image_path in os.listdir('images'):
-for i in range(1000):
-    image_path = "sample.jpg"
+for image_name in os.listdir(f"{file_dir}/images"):
+#for i in range(1000):
+    #image_name = f"sample.jpg"
 
     image_data = {'title': 'Untitled', 'caption': 'Film Negative'}
-    image_data["image"] = f"assets/{image_path}"
+    image_data["image"] = f"assets/images/{image_name}"
     
-    average_color = get_average_color(f'{image_path}')
+    average_color = get_average_color(f'{file_dir}/images/{image_name}')
     print(f'Average Color: {average_color}')
 
     image_data["color"] = average_color
     
     image_list.append(image_data)
 
-with open('data.json', 'w') as json_file:
+with open(f'{file_dir}/data.json', 'w') as json_file:
     json.dump(image_list, json_file, indent=4)
