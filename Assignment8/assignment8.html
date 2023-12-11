@@ -1,42 +1,57 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Assignment 8</title>
-        <link rel="stylesheet" href="style.css">
-        <link 
-        rel="stylesheet" 
-        as="style" 
-        href="https://fonts.googleapis.com/css?family=Nova+Square"
-        />
-        <script src="script.js" defer></script>
-    </head>
-    <body>
-        <div id="canvas">
-            <header id="header">
-                <a href="/">
-                    <div id="logo-title">
-                        Grid of Negatives
-                    </div>
-                </a>
-                
-                <div id="navbar">
-                    <nav>
-                        <a href="https://github.com/killerwhalee/WebDev_NYUIDM">Home</a>
-                        <a href="https://github.com/killerwhalee/WebDev_NYUIDM">Gallery</a>
-                        <a href="https://github.com/killerwhalee/WebDev_NYUIDM">About</a>
-                        <a href="https://github.com/killerwhalee/WebDev_NYUIDM">GitHub</a>
-                    </nav>
+<head>
+    <title>Assignment 8</title>
+    <link rel="stylesheet" href="style-general.css">
+    <link rel="stylesheet" href="style-8.css">
+    <link 
+    rel="stylesheet" 
+    as="style" 
+    href="https://fonts.googleapis.com/css?family=Nova+Square"
+    />
+</head>
+<body>
+    <div id="canvas">
+        <header id="header">
+            <a href="/Assignment8/assignment8.html">
+                <div id="logo-title">
+                    Grid of Negatives
                 </div>
-            </header>
-            <div class="separator"></div>
-            <div id="filter">
-                I want to see the image which is...
+            </a>
+            
+            <div id="navbar">
+                <nav>
+                    <span class="link" onclick="transitionToPage('/Assignment8/assignment8.html')">Home</span>
+                    <span class="link" onclick="transitionToPage('/Assignment8/assignment8-about.html')">About</span>
+                    <a href="https://github.com/killerwhalee/WebDev_NYUIDM" target="_blank">
+                        GitHub
+                        <img src="https://static-00.iconduck.com/assets.00/external-link-icon-2048x2048-wo7lfgrz.png" alt="ext" height="10px">
+                    </a>
+                </nav>
             </div>
-            <section>
-                <div id="tile-container">
-                    <div class="tile"></div>
-                </div>
-            </section>
-        </div>
-    </body>
+        </header>
+        
+        <div class="separator"></div>
+        
+        <section id="main-content">
+            <div id="filter-title">
+                I want to see the picture of
+                <select name="filter" id="filter-select">
+                    <option value="everything">Everything</option>
+                    <option value="color">Color</option>
+                    <option value="black-and-white">Black and White</option>
+                    <option value="cool">Cool</option>
+                    <option value="warm">Warm</option>
+                    <option value="grass">Grassy</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </div>
+            <div id="tile-container">
+                <div class="tile"></div>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="script-general.js" defer></script>
+<script src="script-8.js"></script>
 </html>
