@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap');
+
+/* General Settings */
+* {
+    font-family: 'Rubik', 'sans-serif';
+}
+
+#canvas {
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 75px;
+}
+
+#header {
+    display: flex; 
+    justify-content: space-between;
+}
+
+#logo-title {
+    font-size: 40px;
+    color: #000000;
+}
+
+.separator {
+    height: 1px;
+    width: 100%;
+    margin: 20px 0;
+    background-color: #000000; /* Separator color */
+}
+
+#navbar {
+    display: flex;
+    align-items: end;
+    float: right;
+    font-size: 20px;
+}
+
+#navbar .link, #navbar a {
+    margin-left: 40px;
+}
+
+section { 
+    /* transition settings */
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+/* Hyperlink(or span link) Style */
+a, .link {
+    color: #929292;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:link {
+    color: #929292;
+}
+
+a:visited {
+    color: #929292;
+}
+
+a:hover, .link:hover {
+    color: #3f3f3f;
+}
